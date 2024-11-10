@@ -1,10 +1,9 @@
+# In your workflow file (.github/workflows/example.yml)
 name: My Workflow
-on: [push]                   # Triggers the workflow on every push event
-
+on: [push]
 jobs:
   build:
-    runs-on: self-hosted     # Specifies that the workflow should run on a self-hosted runner
+    runs-on: arc-runner-set
     steps:
-      - uses: actions/checkout@v2    # Checks out the repository to the self-hosted runner
-      - run: echo "Hello from self-hosted runner!"  # Prints a message to confirm execution
-
+      - uses: actions/checkout@v2
+      - run: echo "Hello from self-hosted runner!"
